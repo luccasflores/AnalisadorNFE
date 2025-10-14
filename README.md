@@ -1,4 +1,9 @@
-# AnalisadorNFE
+# 🧠 Analisador NFE - M&H Soluções
+
+Sistema para análise automatizada de NF-e, boletos e conciliação bancária.
+
+![Interface do sistema](docs/interface.png)
+![Exemplo de resultado](docs/exemploderesultadoparte1.png)
 
 GUI (CustomTkinter) para:
 - baixar NFe do eGestor (token pessoal),
@@ -17,6 +22,12 @@ Configure variáveis de ambiente:
 - `EMAIL_PASS`
 
 Opcional: `.env` + `python-dotenv`.
+# 🧠 Analisador NFE - M&H Soluções
+
+Sistema para análise automatizada de NF-e, boletos e conciliação bancária.
+
+![Interface do sistema](docs/interface.png)
+![Exemplo de resultado](docs/exemploderesultadoparte1.png)
 
 ## Rodar
 
