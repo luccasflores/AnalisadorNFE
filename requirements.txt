@@ -1,0 +1,11 @@
+customtkinter
+tkcalendar
+pandas
+aiohttp
+requests
+openpyxl
+xlrd
+pdfplumber
+pypdf
+python-dateutil
+pillow
