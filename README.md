@@ -1,70 +1,75 @@
-# 🧠 Analisador NFE - M&H Soluções
-
-Sistema de automação inteligente para **análise de NF-e, boletos e conciliação bancária**, desenvolvido pela **M&H Soluções**.  
-Integra diferentes fontes de dados (API, e-mail e planilhas) em uma interface visual moderna e intuitiva construída com **CustomTkinter**.
-![Interface do sistema](docs/interface.png)
+# 🧾 Analisador NFE  
+**Sistema de automação para análise de notas fiscais, boletos e conciliação bancária**
 
 ---
 
-## ⚙️ Funcionalidades Principais
+### 📖 Descrição  
+O **Analisador NFE** é um sistema completo de **automação de processos fiscais e financeiros**, desenvolvido em **Python**.  
+Ele realiza a leitura, extração e análise de **NF-e, boletos e extratos bancários**, cruzando os dados automaticamente e gerando relatórios prontos para auditoria e controle interno.
 
-### 🧾 NF-e (API eGestor)
-- Autenticação via **token pessoal** da API eGestor  
-- Download automático dos **XMLs** das notas fiscais  
-- Extração de informações completas (CNPJ, secretaria, empenho, valores, itens, NCM, CFOP)  
-- Geração automática de planilhas Excel (`Notas.xlsx` e `itens_nfe_egestor.xlsx`)
-
-### 💌 Boletos por E-mail (IMAP)
-- Conexão com caixa de entrada (Yahoo, Gmail, etc.)  
-- Download automático de **PDFs anexos** dentro de um intervalo de datas  
-- Identificação de boletos e extração de **valor** e **vencimento**  
-- Exportação de resultados em planilha (`boletos_email.xlsx`)
-
-### 💰 Conciliação Bancária
-- Importação de **extratos bancários Excel ou CSV**  
-- Tratamento e padronização automáticos dos dados  
-- Comparação de valores com notas fiscais — individual ou agrupada por fornecedor  
-- Geração de **relatório final consolidado** (`resultado_conciliacao_bancaria.xlsx`)
+Criado para eliminar tarefas manuais e repetitivas em departamentos financeiros, o sistema permite **ganho de produtividade de até 90%** em rotinas de conferência e conciliação.
 
 ---
 
-## 🖥️ Interface (GUI)
-
-A interface foi construída com **CustomTkinter**, oferecendo modo escuro e organização por abas:
-
-- **NF-e eGestor** → busca e download de XMLs  
-- **Boletos por E-mail** → leitura e extração de PDFs  
-- **Conciliação Bancária** → cruzamento entre notas e extratos  
-
-![Interface do sistema](docs/interface.png)
-![Exemplo de resultado](docs/exemploderesultadoparte1.png)
+### ⚙️ Principais funcionalidades
+- 🔍 Extração automática de dados de NF-e (XML e PDF)  
+- 💳 Leitura de boletos e identificação de pagamentos  
+- 🧾 Conciliação automática entre notas e extratos bancários  
+- 📊 Geração de planilhas e relatórios consolidados em Excel  
+- 💬 Logs detalhados e interface intuitiva com **CustomTkinter**  
+- 🔐 Controle local seguro de arquivos e dados  
 
 ---
 
-## 📁 Estrutura do Projeto
+### 🧠 Tecnologias utilizadas
+| Categoria | Ferramentas |
+|------------|--------------|
+| **Linguagem** | Python 3.11+ |
+| **Bibliotecas principais** | Pandas, OpenPyXL, Playwright, Regex, Logging |
+| **Interface** | CustomTkinter |
+| **Armazenamento e APIs** | Firebase, Google Cloud |
+| **Relatórios** | Excel automatizado (.xlsx) |
+
+--
+
+
+🧩 Estrutura do projeto
+
 AnalisadorNFE/
-│
-├── Analisador.py # Código principal da aplicação
-├── requirements.txt # Dependências principais
-├── requirements.lock.txt # Versões fixadas
-├── logo.ico # Ícone da janela
-│
-├── docs/ # Prints para documentação
-│ ├── interface.png
-│ └── exemploderesultadoparte1.png
-│
-├── xmls/ # (gerado) XMLs baixados da API
-├── pdf_email/ # (gerado) Boletos em PDF baixados por IMAP
-├── extratos_consolidados.xlsx # (gerado) Extratos tratados
-└── resultado_conciliacao_bancaria.xlsx # (gerado) Conciliação final
+├── Analisador.py
+├── modules/
+│   ├── nfe_extractor.py
+│   ├── boleto_reader.py
+│   └── conciliador.py
+├── assets/
+│   └── screenshots/
+├── outputs/
+│   └── planilhas geradas/
+└── requirements.txt
 
----
 
-## 🧩 Requisitos
+### 🎥 Demonstração  
 
-- **Python 3.11+**
-- Instalar dependências:
+**Interface principal do sistema:**  
+![Interface do sistema](docs/interface.png)
 
-```bash
-pip install -r requirements.txt
-    
+**Exemplo de resultado gerado (parte 1):**  
+![Resultado gerado](docs/exemploderesultadoparte1.png)
+
+
+📈 Impacto e resultados
+
+⏱️ Redução de até 90% no tempo de conferência de NF-e e boletos.
+
+💰 Diminuição de erros humanos em rotinas contábeis e fiscais.
+
+📂 Padronização do processo de conciliação bancária.
+
+🧩 Autor
+
+Luccas Flores
+💻 Desenvolvedor Python | Especialista em RPA e automação de processos
+📧 luccasflores.dev@gmail.com
+
+🔗 **Conecte-se comigo no [LinkedIn](https://www.linkedin.com/in/luccas-flores-038757231/)**  
+
