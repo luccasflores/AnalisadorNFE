@@ -1,28 +1,7 @@
-# venv
-.venv/
-venv/
-
-# arquivos sensíveis / gerados
 .env
-*.env
-xmls/
-pdf_email/
-Notas.xlsx
-extratos_consolidados_tratados.xlsx
-resultado_conciliacao_bancaria.xlsx
-detalhes_nfe_egestor.xlsx
-itens_nfe_egestor.xlsx
-
-# planilhas e csv locais
-*.xls
+/xmls/
+/__pycache__/
 *.xlsx
 *.csv
-
-# caches
-__pycache__/
-*.py[cod]
 *.log
-
-# IDE
-.idea/
-.vscode/
+/.venv/

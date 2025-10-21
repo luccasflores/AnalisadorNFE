@@ -1,11 +1,12 @@
 customtkinter
 tkcalendar
-pandas
+pillow
 aiohttp
 requests
+pandas
 openpyxl
 xlrd
+python-dateutil
 pdfplumber
 pypdf
-python-dateutil
-pillow
+python-dotenv

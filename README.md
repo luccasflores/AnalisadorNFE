@@ -1,75 +1,88 @@
-# 🧾 Analisador NFE  
-**Sistema de automação para análise de notas fiscais, boletos e conciliação bancária**
+# 🧠 Analisador NFE – M&H Soluções
 
+Sistema de automação inteligente para **análise de NF-e, boletos e conciliação bancária**, desenvolvido pela **M&H Soluções**.  
+Integra diferentes fontes de dados (API, e-mail e planilhas) em uma interface moderna e intuitiva feita em **Python + CustomTkinter**.
+
+> Projeto desenvolvido e mantido por **Luccas Flores (M&H Soluções)** como parte da suíte de automações fiscais.
 ---
-
-### 📖 Descrição  
-O **Analisador NFE** é um sistema completo de **automação de processos fiscais e financeiros**, desenvolvido em **Python**.  
-Ele realiza a leitura, extração e análise de **NF-e, boletos e extratos bancários**, cruzando os dados automaticamente e gerando relatórios prontos para auditoria e controle interno.
-
-Criado para eliminar tarefas manuais e repetitivas em departamentos financeiros, o sistema permite **ganho de produtividade de até 90%** em rotinas de conferência e conciliação.
-
+**Stack:** `Python 3.11` · `CustomTkinter` · `Playwright` · `Pandas` · `OpenPyXL` · `fdb` · `dotenv`
 ---
+## 📁 Estrutura do Projeto
 
-### ⚙️ Principais funcionalidades
-- 🔍 Extração automática de dados de NF-e (XML e PDF)  
-- 💳 Leitura de boletos e identificação de pagamentos  
-- 🧾 Conciliação automática entre notas e extratos bancários  
-- 📊 Geração de planilhas e relatórios consolidados em Excel  
-- 💬 Logs detalhados e interface intuitiva com **CustomTkinter**  
-- 🔐 Controle local seguro de arquivos e dados  
-
----
-
-### 🧠 Tecnologias utilizadas
-| Categoria | Ferramentas |
-|------------|--------------|
-| **Linguagem** | Python 3.11+ |
-| **Bibliotecas principais** | Pandas, OpenPyXL, Playwright, Regex, Logging |
-| **Interface** | CustomTkinter |
-| **Armazenamento e APIs** | Firebase, Google Cloud |
-| **Relatórios** | Excel automatizado (.xlsx) |
-
---
-
-
-🧩 Estrutura do projeto
-
+```bash
 AnalisadorNFE/
-├── Analisador.py
-├── modules/
-│   ├── nfe_extractor.py
-│   ├── boleto_reader.py
-│   └── conciliador.py
-├── assets/
-│   └── screenshots/
-├── outputs/
-│   └── planilhas geradas/
-└── requirements.txt
+├── src/
+│   ├── app/
+│   │   └── ui.py                 # Interface principal (CustomTkinter)
+│   ├── core/
+│   │   ├── egestor.py            # Integração com API eGestor
+│   │   ├── xml_utils.py          # Extração e leitura de XMLs
+│   │   ├── extratos.py           # Tratamento de extratos bancários
+│   │   ├── reconcile.py          # Lógica de conciliação
+│   │   └── email_billets.py      # Download e leitura de boletos por e-mail
+│   └── __init__.py
+│
+├── docs/                         # Capturas de tela e manuais
+│   ├── interface.png
+│   └── exemploderesultadoparte1.png
+│
+├── xmls/                         # XMLs baixados da API
+├── pdf_email/                    # Boletos em PDF baixados via IMAP
+├── logo.ico                      # Ícone da janela
+├── LOGOMEH_convertido.png         # Logo M&H
+├── .env                          # Configurações locais
+├── .gitignore
+├── pyproject.toml
+├── requirements.txt
+└── README.md
+```
 
 
-### 🎥 Demonstração  
+---
 
-**Interface principal do sistema:**  
-![Interface do sistema](docs/interface.png)
+### 🧮 4. Seção “Instalação e Execução”
 
-**Exemplo de resultado gerado (parte 1):**  
-![Resultado gerado](docs/exemploderesultadoparte1.png)
+Deixe mais clara e igual à dos outros repositórios:
+
+```markdown
+## 🚀 Instalação e Execução
+
+1️⃣ Criar ambiente virtual e instalar dependências
+
+```powershell
+python -m venv .venv
+.venv\Scripts\activate
+pip install -r requirements.txt
 
 
-📈 Impacto e resultados
+2️⃣ Rodar o sistema
+python -m src.app.ui
 
-⏱️ Redução de até 90% no tempo de conferência de NF-e e boletos.
+---
 
-💰 Diminuição de erros humanos em rotinas contábeis e fiscais.
+### 🔑 5. Incluir exemplo de `.env`
 
-📂 Padronização do processo de conciliação bancária.
+```markdown
+## 🔐 Exemplo de arquivo `.env`
 
-🧩 Autor
+```ini
+EGESTOR_PERSONAL_TOKEN=seu_token_pessoal
+IMAP_SERVER=imap.mail.yahoo.com
+IMAP_PORT=993
+EMAIL_USER=usuario@example.com
+EMAIL_PASS=senha_de_app
+TZ=America/Sao_Paulo
 
-Luccas Flores
-💻 Desenvolvedor Python | Especialista em RPA e automação de processos
-📧 luccasflores.dev@gmail.com
+```
+**Luccas Flores**  
+Desenvolvedor Python | Especialista em RPA e Automação Fiscal  
+**M&H Soluções**
 
-🔗 **Conecte-se comigo no [LinkedIn](https://www.linkedin.com/in/luccas-flores-038757231/)**  
+📧 luccasflores.dev@gmail.com  
+🌐 [LinkedIn](https://www.linkedin.com/in/luccas-flores-038757231/) | 🐙 [GitHub](https://github.com/luccasflores)
 
+---
+
+## ⚖️ Licença
+
+Projeto sob a licença MIT – consulte o arquivo `LICENSE` para mais detalhes.
