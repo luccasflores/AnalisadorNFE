@@ -4,9 +4,13 @@ Sistema de automação inteligente para **análise de NF-e, boletos e conciliaç
 Integra diferentes fontes de dados (API, e-mail e planilhas) em uma interface moderna e intuitiva feita em **Python + CustomTkinter**.
 
 > Projeto desenvolvido e mantido por **Luccas Flores (M&H Soluções)** como parte da suíte de automações fiscais.
+
 ---
+
 **Stack:** `Python 3.11` · `CustomTkinter` · `Playwright` · `Pandas` · `OpenPyXL` · `fdb` · `dotenv`
+
 ---
+
 ## 📁 Estrutura do Projeto
 
 ```bash
@@ -29,13 +33,13 @@ AnalisadorNFE/
 ├── xmls/                         # XMLs baixados da API
 ├── pdf_email/                    # Boletos em PDF baixados via IMAP
 ├── logo.ico                      # Ícone da janela
-├── LOGOMEH_convertido.png         # Logo M&H
 ├── .env                          # Configurações locais
 ├── .gitignore
 ├── pyproject.toml
 ├── requirements.txt
 └── README.md
 ```
+
 ---
 
 ## 🖼️ Interface e Resultados
@@ -48,32 +52,24 @@ AnalisadorNFE/
 
 ---
 
-
----
-
-### 🧮 4. Seção “Instalação e Execução”
-
-Deixe mais clara e igual à dos outros repositórios:
-
-```markdown
 ## 🚀 Instalação e Execução
 
-1️⃣ Criar ambiente virtual e instalar dependências
+1️⃣ Criar ambiente virtual e instalar dependências:
 
 ```powershell
 python -m venv .venv
 .venv\Scripts\activate
 pip install -r requirements.txt
+```
 
+2️⃣ Rodar o sistema:
 
-2️⃣ Rodar o sistema
+```powershell
 python -m src.app.ui
+```
 
 ---
 
-### 🔑 5. Incluir exemplo de `.env`
-
-```markdown
 ## 🔐 Exemplo de arquivo `.env`
 
 ```ini
@@ -83,8 +79,12 @@ IMAP_PORT=993
 EMAIL_USER=usuario@example.com
 EMAIL_PASS=senha_de_app
 TZ=America/Sao_Paulo
-
 ```
+
+---
+
+## 👨‍💻 Autor
+
 **Luccas Flores**  
 Desenvolvedor Python | Especialista em RPA e Automação Fiscal  
 **M&H Soluções**
