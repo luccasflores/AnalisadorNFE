@@ -1,19 +1,19 @@
-@"
-
-.env
+# Ambientes/IDE
 .venv/
 __pycache__/
-
-
 .idea/
 .vscode/
 
+# Dados locais/sigilosos
+.env
 
+# Saídas e artefatos gerados em runtime
 /xmls/
 /pdf_email/
+/extratos_consolidados*.xlsx
+/resultado_conciliacao_bancaria.xlsx
+
+# Logs e planilhas
 *.log
 *.xlsx
 *.csv
-
-/img.png
-"@ | Set-Content .gitignore
