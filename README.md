@@ -36,6 +36,17 @@ AnalisadorNFE/
 ├── requirements.txt
 └── README.md
 ```
+---
+
+## 🖼️ Interface e Resultados
+
+### Interface principal
+![Interface do sistema](docs/interface.png)
+
+### Exemplo de resultado gerado
+![Exemplo de resultado da conciliação](docs/exemploderesultadoparte1.png)
+
+---
 
 
 ---

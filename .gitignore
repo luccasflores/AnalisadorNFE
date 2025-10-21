@@ -1,7 +1,20 @@
+@"
+# Environment
 .env
+.venv/
+__pycache__/
+
+# IDE / Editor
+.idea/
+.vscode/
+
+# Artefatos e saídas
 /xmls/
-/__pycache__/
+/pdf_email/
+*.log
 *.xlsx
 *.csv
-*.log
-/.venv/
+
+# Arquivos soltos na raiz que não queremos versionar
+/img.png
+"@ | Set-Content .gitignore
